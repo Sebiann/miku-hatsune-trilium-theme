@@ -1,0 +1,70 @@
+/*
+Stole the demo
+ */
+
+@font-face { /* This will be used as main UI font (see below) */
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/custom/fonts/raleway.woff2') format('woff2');
+}
+
+@font-face { /* This will be used as text content font (see below) */
+  font-family: 'Garamond';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/custom/fonts/garamond.woff2') format('woff2');
+}
+
+body.theme-miku-hatsune:before {
+content: '';
+z-index: -100;
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+-webkit-filter: blur(3px);
+background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9)), url('/custom/image/miku-hatsune.jpg') no-repeat;
+background-size: cover;
+}
+
+body.theme-miku-hatsune {
+--main-font-family: 'Raleway' !important;
+--tree-font-family: inherit;
+--detail-font-family: inherit;
+--detail-text-font-family: 'Garamond' !important;
+--header-background-color: #00000000;
+--button-background-color: #0f0f0fCC;
+--button-disabled-background-color: #404552;
+--button-text-color: (--main-text-color);
+--input-background-color: #00000000;
+--input-text-color: (--main-text-color);
+--main-text-color: #1eb8bf;
+--main-background-color: #00000000;
+--menu-background-color: #0f0f0fCC;
+--link-color:#2f80d0;
+--link-style:italic;
+--main-border-color:#e2e2e2;
+--main-font-size: 0.8rem!important;
+--accented-background-color: (--menu-background-color);
+--more-accented-background-color: (--menu-background-color);
+--active-item-text-color: (--main-text-color);
+--menu-text-color: (--main-text-color);
+--active-item-background-color: #0f0f0fCC;
+--modal-background-color: #0f0f0fCC;
+--muted-text-color: (--main-text-color);
+/* Need to work on this
+--hover-item-background-color: ;
+    
+    theres shit that when hovering over looks shit. ALSO POPUPS
+*/
+}
+
+body.theme-miku-hatsune .note-detail-text {
+    font-size: 120%; /* Garamond is subjectively smaller */
+}
+
+body.theme-miku-hatsune .CodeMirror {
+    filter: invert(100%) hue-rotate(180deg);
+}
