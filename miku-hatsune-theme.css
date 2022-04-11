@@ -16,7 +16,7 @@ Stole the demo
   src: url('/custom/fonts/garamond.woff2') format('woff2');
 }
 
-body.theme-miku-hatsune:before {
+body {
 content: '';
 z-index: -100;
 position: absolute;
@@ -24,12 +24,46 @@ left: 0;
 right: 0;
 top: 0;
 bottom: 0;
--webkit-filter: blur(3px);
-background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9)), url('/custom/image/miku-hatsune.jpg') no-repeat;
+background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9)), url('../../../api/images/0WIyLHN7agH2/miku-hatsune.jpg') no-repeat;
 background-size: cover;
+backdrop-filter: blur(3px);
 }
 
-body.theme-miku-hatsune {
+:root {
+--theme-style: dark;
+
+--tooltip-background-color: #222;
+    
+--menu-text-color: white;
+--menu-background-color: #222;
+    
+--hover-item-text-color: black;
+--hover-item-background-color: #777;
+
+--button-background-color: transparent!important;
+--button-disabled-background-color: transparent!important;
+--button-border-color: #ccc;
+--button-text-color: currentColor;
+--button-border-radius: 5px;
+
+--primary-button-background-color: transparent;
+--primary-button-text-color: white;
+--primary-button-border-color: #999;    
+
+--inactive-tab-background-color: #111;
+--inactive-tab-hover-background-color: #222;
+--inactive-tab-text-color: #4588B3;
+
+--active-tab-background-color: #222;
+--active-tab-hover-background-color: #333;
+--active-tab-text-color: #54A5D8;
+
+--left-pane-background-color: transparent;
+--left-pane-text-color: --blue;
+
+--launcher-pane-background-color: transparent;
+--launcher-pane-text-color: --blue;
+
 --main-font-family: 'Raleway' !important;
 --tree-font-family: inherit;
 --detail-font-family: inherit;
@@ -54,17 +88,16 @@ body.theme-miku-hatsune {
 --active-item-background-color: #0f0f0fCC;
 --modal-background-color: #0f0f0fCC;
 --muted-text-color: (--main-text-color);
-/* Need to work on this
---hover-item-background-color: ;
-    
-    theres shit that when hovering over looks shit. ALSO POPUPS
-*/
 }
 
-body.theme-miku-hatsune .note-detail-text {
+body .global-menu-button {
+    background-image: url("../../../images/icon-grey.png");
+}
+
+body .note-detail-text {
     font-size: 120%; /* Garamond is subjectively smaller */
 }
 
-body.theme-miku-hatsune .CodeMirror {
+body .CodeMirror {
     filter: invert(100%) hue-rotate(180deg);
 }
